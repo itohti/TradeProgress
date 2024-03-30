@@ -46,8 +46,8 @@ class Account:
             self.historic_balance.append((i[0], running_balance))
 
     # Unrealized pl + realized pl = total pl
-    def calculate_total_pl(self, unrealized_pl):
-        self.total_pl = unrealized_pl + self.get_total_historic_pl()
+    def calculate_total_pl(self):
+        self.total_pl = self.unrealized_pl + self.get_total_historic_pl()
     
     # prints notable variables of this class.
     def account_summary(self):
